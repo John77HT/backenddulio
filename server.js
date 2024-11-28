@@ -108,13 +108,19 @@ app.get('/clientes', (req, res) => {
     res.json(clientes);
 });
 
-// Crear un nuevo cliente
 app.post('/clientes', (req, res) => {
-    const { nombre, email, direccion, telefono } = req.body;
-    const id_usuario = clientes.length ? clientes[clientes.length - 1].id_usuario + 1 : 1; // Generar un nuevo ID
-    const nuevoCliente = { id_usuario, nombre, email, direccion, telefono };
+    const { nombre, apellido, edad, ciudad, correo, password } = req.body;
+    const nuevoCliente = {
+        id_usuario: clientes.length + 1,  // Asignar un nuevo ID secuencial
+        nombre,
+        apellido,
+        edad,
+        ciudad,
+        correo,
+        password
+    };
     clientes.push(nuevoCliente);
-    res.status(201).json(nuevoCliente);
+    res.status(201).json(nuevoCliente); // Responder con el nuevo cliente
 });
 
 // Editar un cliente
