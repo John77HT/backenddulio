@@ -16,8 +16,8 @@ let productos = [
 ];
 
 let clientes = [
-    { id_usuario: 1, nombre: 'Juan Perez', email: 'juan@example.com', direccion: 'Calle 123', telefono: '1234567890' },
-    { id_usuario: 2, nombre: 'Maria Gomez', email: 'maria@example.com', direccion: 'Calle 456', telefono: '0987654321' }
+    { id_usuario: 1, nombre: "Juan", apellido: "Pérez", edad: 25, ciudad: "Ciudad A", correo: "juan@example.com", password: "12345" },
+    { id_usuario: 2, nombre: "Ana", apellido: "Gómez", edad: 30, ciudad: "Ciudad B", correo: "ana@example.com", password: "67890" },
 ];
 
 // Rutas para precios
